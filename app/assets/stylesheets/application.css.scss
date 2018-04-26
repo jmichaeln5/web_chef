@@ -20,11 +20,33 @@
  @import "bootstrap";
 
 
- div > ul > li {
-   list-style-type: none;
- }
+ // div > ul > li {
+ //   list-style-type: none;
+ // }
 
-.recipe-show {
+img.recipe-show {
   width: 500px;
   height: auto;
+}
+
+img.recipe-index {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+}
+
+.recipe-box {
+  border: 1px solid black;
+  height: 500px;
+  position: relative;
+}
+
+.recipe-box ul {
+    list-style-type: none;
+    position: absolute;
+    bottom: 0;
+  }
+
+.recipe-box li:first-child {
+  font-size: 150%;
 }

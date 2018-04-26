@@ -1,30 +1,37 @@
+<div class="container"> <!-- Container Begin  -->
+
 <p id="notice"><%= notice %></p>
 
 <h1>Recipes</h1>
 
-<table class="table table-border">
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<div class="row">  <!-- Row Begin -->
 
-  <tbody>
-    <% @recipes.each do |recipe| %>
-      <tr>
-        <td><%= image_tag recipe.image.url, class: "recipe-show" if recipe.image? %> </td>
-        <td><%= recipe.title %></td>
-        <td><%= recipe.description %></td>
-        <td><%= link_to 'Show', recipe %></td>
-        <td><%= link_to 'Edit', edit_recipe_path(recipe) %></td>
-        <td><%= link_to 'Destroy', recipe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+  <% @recipes.each do |recipe|%>
+  <div class="col-md-4">    <!--col-md-4 Begin -->
+
+    <div class="recipe-box"> <!-- Recipe Box Begin -->
+      <% if recipe.image? %>
+        <%= link_to (image_tag recipe.image.url, class: "recipe-index"), recipe %>
+      <% end %>
+
+      <ul>
+          <li><%= recipe.title %> </li>
+          <li><%= recipe.description %> </li>
+          <li>
+            <%= link_to 'Show', recipe %> |
+            <%= link_to 'Edit', edit_recipe_path(recipe) %> |
+            <%= link_to 'Destroy', recipe, method: :delete, data: { confirm: 'Are you sure?' } %>
+          </li>
+      </ul>
+    </div>  <!-- Recipe Box End -->
+  </div>  <!-- col-md-4  End-->
+
+  <% end %>
+
+</div>  <!-- Row End -->
 
 <br>
 
 <%= link_to 'New Recipe', new_recipe_path %>
+
+</div> <!-- Container End  -->
