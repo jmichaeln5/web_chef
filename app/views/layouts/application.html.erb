@@ -1,4 +1,13 @@
 <!DOCTYPE html>
+
+<!-- !!!!! ****   When deploying to Heroku  ***** !!!!-->
+
+ <!-- visit app/uploaders/image_uploader.rb and switch oput commented lines  -->
+ <!-- visit app/config/initialziers/ carrierwave.rb and  uncomment file  -->
+<!-- Deploy to Heroku -->
+<!-- REVERSE STEPS WHEN IN DEVELOPMENT -->
+
+
 <html>
   <head>
     <title>WebChef</title>
@@ -11,15 +20,14 @@
   <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
     <%= link_to "WebChef", root_path, class: "navbar-brand" %>
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav navbar-right">
-        <li> <%= link_to "About", pages_about_path %> </li>
-      </ul>
+      <%= link_to "About", pages_about_path, class:" navbar-brand navbar-nav navbar-right"%>
+
     </div>
   </nav>
 
   <body>
-
-    <%= yield %>
-
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>

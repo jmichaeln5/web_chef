@@ -1,13 +1,33 @@
-<div class="container"> <!-- Container Begin  -->
 
 <p id="notice"><%= notice %></p>
 
-<h1>Recipes</h1>
+
+<div class="text-center">
+
+<br>
+  <h1> Welcome to WebChef. </h1>
+
+  <img src="https://www.wellandgood.com/wp-content/uploads/2017/11/Stocksy-Spices-Darren-Muir.jpg" class="web-chef" alt="WebChef">
+
+    <h2>
+       The online community where we share our favorite recipes with the world.
+     </h2>
+</div>
+<hr>
+
+<br>
+<h2 class="text-center">Recipes</h2>
+<br>
+<br>
+
+<%= link_to 'Add Recipe', new_recipe_path, class: "btn btn-primary btn-block btn-lg" %>
+
+<br>
 
 <div class="row">  <!-- Row Begin -->
 
   <% @recipes.each do |recipe|%>
-  <div class="col-md-4">    <!--col-md-4 Begin -->
+  <div class="col-md-4 ">    <!--col-md-4 Begin -->
 
     <div class="recipe-box"> <!-- Recipe Box Begin -->
       <% if recipe.image? %>
@@ -17,21 +37,23 @@
       <ul>
           <li><%= recipe.title %> </li>
           <li><%= recipe.description %> </li>
+
+          <br>
           <li>
             <%= link_to 'Show', recipe %> |
             <%= link_to 'Edit', edit_recipe_path(recipe) %> |
             <%= link_to 'Destroy', recipe, method: :delete, data: { confirm: 'Are you sure?' } %>
           </li>
+          <br>
+
       </ul>
     </div>  <!-- Recipe Box End -->
-  </div>  <!-- col-md-4  End-->
 
+    <br>
+
+  </div>  <!-- col-md-4  End-->
   <% end %>
 
 </div>  <!-- Row End -->
 
 <br>
-
-<%= link_to 'New Recipe', new_recipe_path %>
-
-</div> <!-- Container End  -->
