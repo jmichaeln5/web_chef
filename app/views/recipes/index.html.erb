@@ -37,12 +37,8 @@
       <ul>
           <li><%= recipe.title %> </li>
           <li><%= recipe.description %> </li>
-
-          <br>
           <li>
-            <%= link_to 'Show', recipe %> |
-            <%= link_to 'Edit', edit_recipe_path(recipe) %> |
-            <%= link_to 'Destroy', recipe, method: :delete, data: { confirm: 'Are you sure?' } %>
+            <%= link_to 'Learn More', recipe,  class: 'btn btn-success btn-default'%>
           </li>
           <br>
 
