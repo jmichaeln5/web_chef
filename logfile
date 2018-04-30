@@ -4,3 +4,7 @@
 2018-04-27 09:00:01.385 EDT [4640] LOG:  database system is ready to accept connections
 2018-04-27 09:00:19.625 EDT [4706] FATAL:  database "webchef_development" does not exist
 2018-04-27 09:00:36.340 EDT [4755] FATAL:  database "webchef_development" does not exist
+2018-04-27 15:02:55.699 EDT [12839] FATAL:  database "fit_305_development" does not exist
+2018-04-27 15:05:07.545 EDT [13233] FATAL:  database "fit_305_development" does not exist
+2018-04-27 15:05:31.600 EDT [13427] FATAL:  database "fit_305_development" does not exist
+2018-04-27 15:05:41.243 EDT [13480] FATAL:  database "fit_305_development" does not exist
