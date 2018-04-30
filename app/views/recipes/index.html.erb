@@ -4,10 +4,14 @@
 
 <div class="text-center">
 
-<br>
-  <h1> Welcome to VeganEats. </h1>
+  <br>
+  <br>
 
-  <img src="https://www.wellandgood.com/wp-content/uploads/2017/11/Stocksy-Spices-Darren-Muir.jpg" class="web-chef" alt="WebChef">
+  <!-- <img src="https://www.wellandgood.com/wp-content/uploads/2017/11/Stocksy-Spices-Darren-Muir.jpg" class="web-chef" alt="WebChef"> -->
+
+  <img src="https://s3.amazonaws.com/webchef/uploads/veganeats.jpg" class="web-chef" alt="WebChef">
+
+  <h1>Welcome to VeganEats</h1>
 
     <h2>
        The online community where we share our favorite vegan recipes with the world.
@@ -26,7 +30,7 @@
 
 <div class="row">  <!-- Row Begin -->
 
-  <% @recipes.each do |recipe|%>
+  <% @recipes.each do |recipe |%>
   <div class="col-md-4 ">    <!--col-md-4 Begin -->
 
     <div class="recipe-box"> <!-- Recipe Box Begin -->
@@ -38,6 +42,7 @@
           <li><%= recipe.title %> </li>
           <!-- <li><%= recipe.description %> </li> -->
           <li>
+            <br>
             <%= link_to 'Learn More', recipe,  class: 'btn btn-success btn-default'%>
           </li>
           <br>
