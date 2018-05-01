@@ -8,3 +8,7 @@
 2018-04-27 15:05:07.545 EDT [13233] FATAL:  database "fit_305_development" does not exist
 2018-04-27 15:05:31.600 EDT [13427] FATAL:  database "fit_305_development" does not exist
 2018-04-27 15:05:41.243 EDT [13480] FATAL:  database "fit_305_development" does not exist
+2018-04-30 10:37:48.545 EDT [32079] FATAL:  database "MyApply_development" does not exist
+2018-04-30 10:38:04.389 EDT [32145] FATAL:  database "MyApply_development" does not exist
+2018-04-30 10:38:12.447 EDT [32191] FATAL:  database "MyApply_development" does not exist
+2018-04-30 17:39:09.145 EDT [48632] FATAL:  role "fit_305" does not exist
