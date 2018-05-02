@@ -1,6 +1,4 @@
-
 <p id="notice"><%= notice %></p>
-
 
 <div class="text-center">
 
@@ -13,9 +11,9 @@
 
   <h1>Welcome to VeganEats</h1>
 
-    <h2>
-       The online community where we share our favorite vegan recipes with the world.
-     </h2>
+  <h2>
+    The online community where we share our favorite vegan recipes with the world.
+  </h2>
 </div>
 <hr>
 
@@ -28,30 +26,37 @@
 
 <br>
 
-<div class="row">  <!-- Row Begin -->
+<div class="row">
+  <!-- Row Begin -->
   <% @recipes.each do |recipe |%>
-  <div class="col-md-4 ">    <!--col-md-4 Begin -->
+    <div class="col-md-4 ">
+      <!--col-md-4 Begin -->
 
-    <div class="recipe-box"> <!-- Recipe Box Begin -->
-      <% if recipe.image? %>
-        <%= link_to (image_tag recipe.image.url, class: "recipe-index"), recipe %>
-      <% end %>
+      <div class="recipe-box">
+        <!-- Recipe Box Begin -->
+        <% if recipe.image? %>
+          <%= link_to (image_tag recipe.image.url, class: "recipe-index"), recipe %>
+        <% end %>
 
-      <ul>
-          <li><%= recipe.title %> </li>
+        <ul>
+          <li><%= recipe.title %>
+          </li>
           <!-- <li><%= recipe.description %> </li> -->
           <li>
             <br>
-            <%= link_to 'Learn More', recipe,  class: 'btn btn-success btn-default'%>
+            <%= link_to 'Learn More', recipe, class: 'btn btn-success btn-default'%>
           </li>
           <br>
 
-      </ul>
-    </div>  <!-- Recipe Box End -->
-    <br>
-  </div>  <!-- col-md-4  End-->
+        </ul>
+      </div>
+      <!-- Recipe Box End -->
+      <br>
+    </div>
+    <!-- col-md-4 End-->
   <% end %>
 
-</div>  <!-- Row End -->
+</div>
+<!-- Row End -->
 
 <br>

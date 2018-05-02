@@ -1,0 +1,38 @@
+%p#notice= notice
+.text-center
+  %br/
+  %br/
+  / <img src="https://www.wellandgood.com/wp-content/uploads/2017/11/Stocksy-Spices-Darren-Muir.jpg" class="web-chef" alt="WebChef">
+  %img.web-chef{:alt => "WebChef", :src => "https://s3.amazonaws.com/webchef/uploads/veganeats.jpg"}/
+  %h1 Welcome to VeganEats
+  %h2
+    The online community where we share our favorite vegan recipes with the world.
+%hr/
+%br/
+%h2.text-center Recipes
+%br/
+%br/
+= link_to 'Add Recipe', new_recipe_path, class: "btn btn-primary btn-block btn-lg"
+%br/
+.row
+  / Row Begin
+  - @recipes.each do |recipe |
+    .col-md-4
+      / col-md-4 Begin
+      .recipe-box
+        / Recipe Box Begin
+        - if recipe.image?
+          = link_to (image_tag recipe.image.url, class: "recipe-index"), recipe
+        %ul
+          %li
+            = recipe.title
+          / <li><haml_loud> recipe.description </haml_loud> </li>
+          %li
+            %br/
+            = link_to 'Learn More', recipe,  class: 'btn btn-success btn-default'
+          %br/
+      / Recipe Box End
+      %br/
+    / col-md-4  End
+/ Row End
+%br/
